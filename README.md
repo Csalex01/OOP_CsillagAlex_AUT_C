@@ -1,1 +1,2 @@
-# OOP_CsillagAlex_AUT_C
+## Csillag Alex - Objektumorientált Programozás
+Automatizálás, I. év
