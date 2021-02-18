@@ -1,2 +1,2 @@
 ## Csillag Alex - Objektumorientált Programozás
-Automatizálás, I. év
+Automatizálás, I. év, C csoport
