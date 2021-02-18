@@ -8,5 +8,11 @@ public class Main {
 	    for(int i = 0; i < nev.length(); i++) {
             System.out.println(nev.charAt(i));
         }
+
+	    String monogram = " Cs. A.";
+
+	    nev += monogram;
+
+        System.out.println(nev);
     }
 }
