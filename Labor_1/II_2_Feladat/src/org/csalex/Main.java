@@ -1,5 +1,10 @@
 package org.csalex;
 
+/**
+ * Szép megoldás, de arra ügyelj, hogy ha tegyük fel az order > 8
+ * ne pont 1-et téríts vissza. Olyan érzést kelt mintha 1-es bit lenne ott.
+ * Legyen látványosabb a "hiba". Pl -1 -es érték.
+ */
 public class Main {
 
     public static void main(String[] args) {

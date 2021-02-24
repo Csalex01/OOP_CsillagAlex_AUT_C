@@ -18,6 +18,9 @@ public class Main {
         if(array.length == 0)
             return max;
 
+        /**
+         * Ez veszélyes. Mi van, ha csak egy eleme van az array-nek?
+         */
         max[0] = array[0];
         max[1] = array[1];
 

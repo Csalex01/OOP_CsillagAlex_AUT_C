@@ -1,5 +1,9 @@
 package org.csalex;
 
+/**
+ * Szép megoldás. Laboron megnézünk még egyet, ami még elegánsabb, kevesebb kódot tartalmaz.
+ * Esetleg próbáld ki: fel kell használni benne a subString metódust.
+ */
 public class Main {
 
     public static void main(String[] args) {
