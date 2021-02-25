@@ -1,4 +1,4 @@
-package rectangle;
+package org.csalex;
 
 public class Rectangle {
 
