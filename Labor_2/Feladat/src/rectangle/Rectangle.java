@@ -2,16 +2,20 @@ package rectangle;
 
 public class Rectangle {
 
-    //Attributes, data - tulajdonsagok
-    //egysegbezaras - encapsulation
+    // Attributes, Data - Tulajdonsagok
+    // Egysegbezaras - Encapsulation
+
     private double width;
     private double length;
+
+
     //public String rectangleName; //egysegbezaras nincs betartva
 
     //Methods, behaviour - viselkedes
 
     //Constructor - inicializalas, lefoglalas
     //default constructor
+
     public Rectangle() {
 
     }
