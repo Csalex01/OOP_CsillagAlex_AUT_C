@@ -73,20 +73,19 @@ public class Main {
         Random rand = new Random();
 
         int year, month, day;
-        int count = 0;
+        int counter = 0;
 
         for(int i = 0; i < 100; i++) {
-            year = rand.nextInt(3000);
+            year = rand.nextInt(3001);
             month = rand.nextInt(12) + 1;
             day = rand.nextInt(31) + 1;
 
             if(!DateUtil.isValidDate(year, month, day)) {
-                MyDate date = new MyDate(year, month, day);
-                count++;
+                counter++;
                 System.out.println(year + "/" + month + "/" + day);
             }
         }
 
-        System.out.println("Invlaid dates: " + count);
+        System.out.println("Invlaid dates: " + counter);
     }
 }
