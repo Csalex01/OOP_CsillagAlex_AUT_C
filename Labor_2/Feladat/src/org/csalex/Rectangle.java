@@ -2,21 +2,11 @@ package org.csalex;
 
 public class Rectangle {
 
-    // Attributes, Data - Tulajdonsagok
-    // Egysegbezaras - Encapsulation
-
     private double width;
     private double length;
 
-
-    //public String rectangleName; //egysegbezaras nincs betartva
-
-    //Methods, behaviour - viselkedes
-
-    //Constructor - inicializalas, lefoglalas
-    //default constructor
-
-    public Rectangle() {
+    public Rectangle()
+    {
 
     }
 
@@ -27,29 +17,30 @@ public class Rectangle {
 
     public Rectangle(double width) {
         this.width = width;
-        this.length = 0;
+        this.length = width;
     }
 
     //Getters
     public double getWidth(){
         return width;
     }
+
     public double getLength(){
         return length;
     }
+
     //Setters
     public void setWidth(double width) {
         this.width = width;
     }
 
-    @Override
-    public String toString() {
-
-        //felepithetjuk a kimenetet
-        //Rectangle: hossz X szelesseg
-        //Rectangle: 10 X 12
-        return "Rectangle: " + this.width + " X " + this.length;
+    public void setLength(double length) {
+        this.length = length;
     }
 
+    @Override
+    public String toString() {
+        return "Rectangle: " + this.width + " X " + this.length;
+    }
 
 }
