@@ -1,6 +1,9 @@
 package org.csalex;
 
 public class Car {
+
+    // Privát mezők deklarálása
+
     private String carBrand;
     private String carType;
     private Color color;
@@ -10,7 +13,18 @@ public class Car {
     private int yearOfManufacture;
     private int speed;
 
-    // Constructors
+    // ----------
+
+    /**
+     * @param carBand               Az autó márkája
+     * @param carType               Az autó tipusa
+     * @param color                 Az autó színe
+     * @param fuel                  Az autó üzemanyagának tipusa (DIESEL, PETROL, GAS, ELECTRIC)
+     * @param numberOfKilometers    Az autó által megtett út (kilóméterben kifejezve)
+     * @param numberOfPassengers    Az autóban elérhető férőhelyek száma (5 - családi autó)
+     * @param yearOfManufacture     Az autó gyártási éve
+     * @param speed                 Az autó kurrens sebessége
+     */
     Car(String carBand, String carType, Color color, FuelType fuel, int numberOfKilometers, int numberOfPassengers, int yearOfManufacture, int speed) {
         this.carBrand = carBand;
         this.carType = carType;
@@ -22,6 +36,13 @@ public class Car {
         this.speed = speed;
     }
 
+    /**
+     * @param carBrand              Az autó márkája
+     * @param carType               Az autó típusa
+     * @param fuel                  Az autó üzemanyagának tipusa (DIESEL, PETROL, GAS, ELECTRIC)
+     * @param family                Családi autó? (True / False)
+     * @param yearOfManufacture     Az autó gyártási éve
+     */
     Car(String carBrand, String carType, int fuel, boolean family, int yearOfManufacture) {
         this.carBrand = carBrand;
         this.carType = carType;
@@ -66,7 +87,8 @@ public class Car {
         }
     }
 
-    // Getter functions
+    // Getter függvények
+
     public String getCarBrand() {
         return this.carBrand;
     }
@@ -98,9 +120,11 @@ public class Car {
     public int getSpeed() {
         return this.speed;
     }
+
     // ----------
 
-    // Setter functions
+    // Setter függvények
+
     public void setCarBrand(String carBrand) {
         this.carBrand = carBrand;
     }
@@ -132,9 +156,15 @@ public class Car {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
+
     // ----------
 
-    // Other methods
+    // Egyéb metódusok/tagfüggvények
+
+    /**
+     * Az autó sebessége nem lehet negatív!
+     * @param speedIndicator        Az autó jelenlegi gyorsulása
+     */
     public void changeSpeed(int speedIndicator) {
         if(this.speed + speedIndicator < 0)
             return;
@@ -142,6 +172,10 @@ public class Car {
         this.speed += speedIndicator;
     }
 
+    /**
+     * Az autó által megtett távolság minden 200 km után nullázódik!
+     * @param length                Az autó által megtett távolságához hozzáadandó távolság
+     */
     public void moveCar(int length) {
         if(length < 0)
             return;
@@ -156,6 +190,7 @@ public class Car {
 
     }
 
+    // Segédfüggvény, amely az autó által megtett távolság nullázásáért felel.
     public void resetMileage() {
         this.numberOfKilometers = 0;
     }
@@ -166,4 +201,6 @@ public class Car {
                 " car which was manufactured in " + this.yearOfManufacture + ". It has " + this.color +
                 " color and the number of kilometers traveled is: " + this.numberOfKilometers;
     }
+
+    // ----------
 }
