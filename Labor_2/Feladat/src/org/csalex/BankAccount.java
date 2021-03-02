@@ -2,7 +2,7 @@ package org.csalex;
 
 public class BankAccount {
     private double balance;
-    private String accountNumber;
+    private final String accountNumber;
 
     BankAccount(String accountNumber) {
         this.accountNumber = accountNumber;

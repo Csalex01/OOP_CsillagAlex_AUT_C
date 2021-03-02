@@ -37,9 +37,9 @@ public class Main {
     private static void ex2() {
         System.out.println("\nEx. 2:");
 
-        Rectangle  teglalap = new Rectangle();
-        Rectangle  teglalap1 = new Rectangle(15,20);
-        Rectangle  teglalap2 = new Rectangle(12);
+        Rectangle teglalap = new Rectangle();
+        Rectangle teglalap1 = new Rectangle(15,20);
+        Rectangle teglalap2 = new Rectangle(12);
 
         System.out.println(teglalap);
         System.out.println(teglalap1);
@@ -86,6 +86,6 @@ public class Main {
             }
         }
 
-        System.out.println("Invlaid dates: " + counter);
+        System.out.println("Invalid dates: " + counter);
     }
 }
