@@ -6,7 +6,7 @@ public class Customer {
     private final String firstName;
     private String lastName;
     private int numAccounts;
-    private BankAccount[] accounts;
+    private final BankAccount[] accounts;
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
@@ -18,14 +18,14 @@ public class Customer {
            Setter methods
      */
 
-    void addAccount(BankAccount account) {
+    public void addAccount(BankAccount account) {
         if (this.numAccounts < MAX_ACCOUNTS) {
             this.accounts[numAccounts] = account;
             this.numAccounts++;
         }
     }
 
-    void setLastName(String lastName) {
+    public void setLastName(String lastName) {
         if (lastName.length() > 0)
             this.lastName = lastName;
     }
