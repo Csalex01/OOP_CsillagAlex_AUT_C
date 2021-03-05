@@ -15,11 +15,11 @@ public class Teacher {
 
     public static int currentNumberOfTeachers = 0;
 
-    private String fristName;
-    private String lastName;
-    private Degree degree;
-    private Department department;
-    private int teacherID;
+    private final String fristName;
+    private final String lastName;
+    private final Degree degree;
+    private final Department department;
+    private final int teacherID;
 
     /*
         Constructor(s)

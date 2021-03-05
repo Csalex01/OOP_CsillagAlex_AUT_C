@@ -12,10 +12,10 @@ public class Student {
         Fields
      */
 
-    private String neptunCode;
-    private String firstName;
-    private String lastName;
-    private Major major;
+    private final String neptunCode;
+    private final String firstName;
+    private final String lastName;
+    private final Major major;
 
 
     /*

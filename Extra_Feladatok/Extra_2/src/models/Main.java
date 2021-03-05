@@ -7,7 +7,6 @@ import enums.Major;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.DayOfWeek;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -74,7 +73,7 @@ public class Main {
             return data;
 
         } catch (FileNotFoundException e) {
-            System.out.println("An error occured!");
+            System.out.println("An error occurred!");
             e.printStackTrace();
             return null;
         }
