@@ -7,6 +7,7 @@ import enums.Major;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.DayOfWeek;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -27,7 +28,7 @@ public class Main {
         for (int i = 0; i < coursesData.length; i++) {
             if (coursesData[i] != null) {
                 String[] data = coursesData[i].split(",");
-                courses[i] = new Course(data[0], Integer.parseInt(data[2]), DayOfWeek.values()[Integer.parseInt(data[1]) - 1]);
+                courses[i] = new Course(data[0], Integer.parseInt(data[2]), DayOfWeek.values()[Integer.parseInt(data[1]) - 2]);
                 courses[i].setTeacher(new Teacher(data[3], data[4], Degree.valueOf(data[5]), Department.values()[0]));
             }
         }
@@ -46,12 +47,22 @@ public class Main {
         }
 
         // Example for Major.AUTOMATION_AND_APPLIED_INFORMATICS
-        for(Course c : courses) {
-            if(c != null) {
-                System.out.print(c.getCourseID() + ": \n");
-                printEnrolledStudentsByMajor(Major.AUTOMATION_AND_APPLIED_INFORMATICS, c.getCourseID());
-            }
-        }
+//        for(Course c : courses) {
+//            if(c != null) {
+//                System.out.print(c.getCourseID() + ": \n");
+//                printEnrolledStudentsByMajor(Major.AUTOMATION_AND_APPLIED_INFORMATICS, c.getCourseID());
+//            }
+//        }
+
+//        Course[] coursesByTeacher = courseByTeacherDegree(Degree.PROFESSOR);
+//
+//        for (Course c : coursesByTeacher)
+//            if (c != null)
+//                System.out.println(c);
+
+//        for(DayOfWeek d : DayOfWeek.values()) {
+//            System.out.println(d + ": " + nrOfCoursesByDay(d));
+//        }
     }
 
     public static String[] readFromFile(String fileName) {
@@ -93,10 +104,26 @@ public class Main {
     }
 
     public static Course[] courseByTeacherDegree(Degree degree) {
-        return null;
+        Course[] coursesByTeacher = new Course[courses.length];
+        int index = 0;
+
+        for (Course c : courses) {
+            if (c != null && c.getTeacher().getDegree().equals(degree)) {
+                coursesByTeacher[index] = c;
+                index++;
+            }
+        }
+
+        return coursesByTeacher;
     }
 
     public static int nrOfCoursesByDay(DayOfWeek dayOfWeek) {
-        return DayOfWeek.MONDAY.getValue();
+        int counter = 0;
+
+        for(Course c : courses)
+            if(c != null && c.getDayOfCourse().equals(dayOfWeek))
+                counter++;
+
+        return counter;
     }
 }

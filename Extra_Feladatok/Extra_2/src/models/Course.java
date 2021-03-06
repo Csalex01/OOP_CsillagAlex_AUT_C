@@ -49,6 +49,18 @@ public class Course {
     }
 
     /*
+        Getter methods
+     */
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public DayOfWeek getDayOfCourse() {
+        return dayOfCourse;
+    }
+
+    /*
         Other methods
      */
 
