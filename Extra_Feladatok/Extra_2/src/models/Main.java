@@ -7,7 +7,6 @@ import enums.Major;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.DayOfWeek;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -46,23 +45,23 @@ public class Main {
             }
         }
 
-        // Example for Major.AUTOMATION_AND_APPLIED_INFORMATICS
-//        for(Course c : courses) {
-//            if(c != null) {
-//                System.out.print(c.getCourseID() + ": \n");
-//                printEnrolledStudentsByMajor(Major.AUTOMATION_AND_APPLIED_INFORMATICS, c.getCourseID());
-//            }
-//        }
+//         Example for Major.AUTOMATION_AND_APPLIED_INFORMATICS
+        for(Course c : courses) {
+            if(c != null) {
+                System.out.print(c.getCourseID() + ": \n");
+                printEnrolledStudentsByMajor(Major.AUTOMATION_AND_APPLIED_INFORMATICS, c.getCourseID());
+            }
+        }
 
-//        Course[] coursesByTeacher = courseByTeacherDegree(Degree.PROFESSOR);
-//
-//        for (Course c : coursesByTeacher)
-//            if (c != null)
-//                System.out.println(c);
+        Course[] coursesByTeacher = courseByTeacherDegree(Degree.PROFESSOR);
 
-//        for(DayOfWeek d : DayOfWeek.values()) {
-//            System.out.println(d + ": " + nrOfCoursesByDay(d));
-//        }
+        for (Course c : coursesByTeacher)
+            if (c != null)
+                System.out.println(c);
+
+        for(DayOfWeek d : DayOfWeek.values()) {
+            System.out.println(d + ": " + nrOfCoursesByDay(d));
+        }
     }
 
     public static String[] readFromFile(String fileName) {
