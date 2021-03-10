@@ -46,6 +46,7 @@ public class Main {
         }
 
 //         Example for Major.AUTOMATION_AND_APPLIED_INFORMATICS
+        System.out.println("----------\nStudents who major in AUTOMATION_AND_APPLPIED_INFORMATICS by courses: ");
         for(Course c : courses) {
             if(c != null) {
                 System.out.print(c.getCourseID() + ": \n");
@@ -59,9 +60,18 @@ public class Main {
             if (c != null)
                 System.out.println(c);
 
+        System.out.println("----------\nNumber of classes by day: ");
         for(DayOfWeek d : DayOfWeek.values()) {
             System.out.println(d + ": " + nrOfCoursesByDay(d));
         }
+
+        cancelEnrollments("cancellation.csv");
+
+        System.out.println("----------\nCourses after cancellations: ");
+
+        for (Course c : coursesByTeacher)
+            if (c != null)
+                System.out.println(c);
     }
 
     public static String[] readFromFile(String fileName) {
@@ -99,7 +109,22 @@ public class Main {
     }
 
     public static void cancelEnrollments(String fileName) {
+        try {
+            File fin = new File(fileName);
+            Scanner scanner = new Scanner(fin);
+            String neptunCode;
 
+            while(scanner.hasNext()) {
+                neptunCode = scanner.nextLine();
+                for(Course c : courses)
+                    if(c != null)
+                        c.cancelEnrollmentOfStudent(neptunCode);
+            }
+
+        } catch(FileNotFoundException e) {
+            System.out.println("An error occurred!");
+            e.printStackTrace();
+        }
     }
 
     public static Course[] courseByTeacherDegree(Degree degree) {
