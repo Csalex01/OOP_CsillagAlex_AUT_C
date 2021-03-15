@@ -1,6 +1,11 @@
 package labor3_2_ArrayList;
 
 import java.util.ArrayList;
+//import labor3_2_ArrayList.BankAccount;
+
+/*
+    Valamiért szintaktikai hibát ad az IntelliJ IDEA, viszont hibátlanul fut le a program.
+ */
 
 public class Customer {
     public static final int MAX_ACCOUNTS = 10;
