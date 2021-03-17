@@ -1,4 +1,4 @@
-package labor4_1;
+package labor5_1;
 
 public class Person {
     private final String firstName;

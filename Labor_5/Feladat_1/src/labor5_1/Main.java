@@ -1,8 +1,7 @@
-package labor4_1;
+package labor5_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
