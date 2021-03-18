@@ -2,12 +2,15 @@ package labor4_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        readFilePrintItsLineNumbered("lab4_1_input.txt");
+        System.out.println("----------");
+
         ArrayList<Person> people = readFromCSVFile("lab4_1_input.csv");
 
         if(people == null)
@@ -18,7 +21,7 @@ public class Main {
     }
 
     public static void readFilePrintItsLineNumbered(String fileName) {
-        Scanner scanner = null;
+        Scanner scanner;
 
         try {
             scanner = new Scanner(new File(fileName));
@@ -51,7 +54,7 @@ public class Main {
             String line = scanner.nextLine();
 
             if(line.isEmpty())
-                continue;;
+                continue;
 
             String[] items = line.split(",");
             String firstName = items[0].trim();

@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\lab4_2_input.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\labor3_2_ArrayList\Customer.java">
           <value>
             <Attribute>
@@ -18,6 +25,20 @@
           </value>
         </entry>
         <entry key="\src\labor4_1\Customer.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\labor4_2\Customer.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\labor4_2\Main.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
