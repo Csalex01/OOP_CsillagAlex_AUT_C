@@ -13,7 +13,6 @@ public class Main {
         assert customers != null;
         // ----------
 
-
         for(Customer c : customers)
             System.out.println(c);
     }

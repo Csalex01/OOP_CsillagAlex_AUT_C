@@ -1,11 +1,11 @@
-Customer, John, Black
+Customer, John, BLACK
 Account, OTP1, 1000
 Account, OTP3, 500
-Customer, Steve, Brown
-Customer, Mary, White
+Customer, Steve, BROWN
+Customer, Mary, WHITE
 Account, OTP2, 1200
 Account, OTP4, 300
 Account, OTP5, 5000
-Customer, Alex, Csillag
+Customer, Alex, CSILLAG
 Account, OTP6, 3500
 Account, OTP7, 4000
