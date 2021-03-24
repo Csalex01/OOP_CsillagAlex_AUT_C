@@ -1,0 +1,19 @@
+Dog,	Dental Disease,	teeth cleaning,	extractions,	root canal
+Dog,	Ear Infections,	clean and dry the ear,	topical antibiotic,	anti-fungal
+Dog,	Itchy skin or skin infections,	shampoo to treat allergies,	antibiotic ointment for more severe skin infections
+Dog,	Vomiting and Diarrhea,	proper diet
+Dog,	Stiffness and Pain,	keep your dog at a healthy weight,	use a glucosamine or a chondroitin supplement
+Dog,	Urinary Tract Problems,	proper antibiotic treatment
+Dog, Obesity,	high-quality diet,	regular exercise
+Cat,	Polycystic Kidney Disease,	Antibiotics,	anti-inflammatories,	omega-3 fatty acids
+Cat,	Feline Asthma,	include a steroid
+Cat,	Panleukopenia,	Hospitalization,	intravenous fluids
+Cat,	Epilepsy,	Levetiracetam,	Zonisamide,	Potassium Bromide
+Parrot,	Psittacosis,	Antibiotic
+Parrot,	Polyomavirus,	Vaccination,	Strict hygiene
+Parrot,	Pacheco’s Disease,	anti-viral drug, Acyclovir,	Quarantine
+Parrot,	Giardia	antibiotics,	keep the aviary clean and dry, avoid overcrowding
+Parrot,	Malnutrition,	proper diet
+Turtle,	Abscesses,	A vitamin,	force feeding
+Turtle,	Shell infections,	intensive care,	fluid therapy
+Turtle,	Gastrointestinal parasites,	taking radiographs (X-rays),	running blood tests
