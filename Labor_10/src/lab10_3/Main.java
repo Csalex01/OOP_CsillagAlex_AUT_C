@@ -11,14 +11,14 @@ package lab10_3;
 
 public class Main {
     public static void main(String[] args) {
-        Storage storage = new Storage("data/data1000000.txt");
+        Storage storage = new Storage("data/data1000.txt");
 
 //        System.out.println("---------------");
 //        System.out.println(" Before update ");
 //        System.out.println("---------------");
 //        storage.printProducts();
 
-        storage.update("data/update1000000.txt");
+        storage.update("data/update1000.txt");
 
 //        System.out.println("---------------");
 //        System.out.println("  After update ");
