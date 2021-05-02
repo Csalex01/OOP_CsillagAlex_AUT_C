@@ -1,7 +1,5 @@
 package lab10_2;
 
-import lab10_1.MyDate;
-
 public class Main {
 
     public static void main(String[] args) {
