@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Company {
@@ -53,7 +54,7 @@ public class Company {
             String line = scanner.nextLine();
             String[] fields = line.split(", ");
 
-            Employee employee = null;
+            Employee employee;
 
             boolean manager = false;
 
@@ -108,6 +109,10 @@ public class Company {
             if (employee instanceof Manager)
                 ps.println(employee);
         }
+    }
+
+    public void sortByComparator(Comparator<Employee> comparator) {
+        this.employees.sort(comparator);
     }
 
 }

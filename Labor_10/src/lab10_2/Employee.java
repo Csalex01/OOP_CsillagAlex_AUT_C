@@ -74,8 +74,8 @@ public class Employee implements Comparable<Employee> {
             buffer.append("(EMPLOYEE)\n");
         }
 
-        buffer.append("\tFirst Name: ").append(this.firstName).append("\n")
-                .append("\tLast Name: ").append(this.lastName).append("\n")
+        buffer.append("\tLast Name: ").append(this.lastName).append("\n")
+                .append("\tFirst Name: ").append(this.firstName).append("\n")
                 .append("\tSalary: ").append(this.salary).append("\n")
                 .append("\tBirth Date: ")
                 .append(this.birthDate.getYear()).append(".")
