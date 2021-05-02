@@ -8,11 +8,15 @@ public class Employee implements Comparable<Employee> {
 
     private final int ID;
     private String firstName;
-    private String lastName;
+    private final String lastName;
     private double salary;
-    private MyDate birthDate;
+    private final MyDate birthDate;
 
-    public Employee(String firstName, String lastName, double salary, MyDate birthDate) {
+    public Employee(String firstName,
+                    String lastName,
+                    double salary,
+                    MyDate birthDate) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
@@ -24,7 +28,6 @@ public class Employee implements Comparable<Employee> {
     }
 
     // GETTER Methods
-
 
     public int getID() {
         return this.ID;
@@ -48,7 +51,6 @@ public class Employee implements Comparable<Employee> {
 
     // SETTER Methods
 
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -61,18 +63,34 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "ID=" + ID +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", salary=" + salary +
-                ", birthDate=" + birthDate +
-                '}';
+
+        StringBuilder buffer = new StringBuilder();
+
+        buffer.append(this.ID).append(" ");
+
+        if(this instanceof Manager) {
+            buffer.append("(MANAGER)\n");
+        } else {
+            buffer.append("(EMPLOYEE)\n");
+        }
+
+        buffer.append("\tFirst Name: ").append(this.firstName).append("\n")
+                .append("\tLast Name: ").append(this.lastName).append("\n")
+                .append("\tSalary: ").append(this.salary).append("\n")
+                .append("\tBirth Date: ")
+                .append(this.birthDate.getYear()).append(".")
+                .append(this.birthDate.getMonth()).append(".")
+                .append(this.birthDate.getDay())
+                .append("\n----------\n");
+
+        return buffer.toString();
     }
 
     @Override
     public int compareTo(Employee o) {
-        // Vezetéknév és Keresztnév szerint lexikografikus sorrendben
-        return 0;
+        String thisName = this.lastName + this.firstName;
+        String oName = o.lastName + o.firstName;
+
+        return thisName.compareTo(oName);
     }
 }
