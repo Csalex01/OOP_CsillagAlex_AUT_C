@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Storage {
 
-    private ArrayList<Product> products;
+    private final ArrayList<Product> products;
 
     public Storage(String fileName) {
         this.products = new ArrayList<>();
