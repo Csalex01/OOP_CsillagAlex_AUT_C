@@ -12,11 +12,11 @@ public class Main {
 
         float sum = 0;
 
-        for(String number : input) {
+        for(String number : input)
             try {
                 sum += Float.parseFloat(number);
             } catch (NumberFormatException ignored) {}
-        }
+
 
         System.out.println("Sum: " + sum);
     }
