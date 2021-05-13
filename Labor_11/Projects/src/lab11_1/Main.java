@@ -8,14 +8,16 @@ public class Main {
         System.out.print("Input: ");
         Scanner scanner = new Scanner(System.in);
 
-        String[] input = scanner.nextLine().split(" ");
+        String[] input = scanner.nextLine().trim().split(" ");
 
         float sum = 0;
 
         for(String number : input)
             try {
                 sum += Float.parseFloat(number);
-            } catch (NumberFormatException ignored) {}
+            } catch (NumberFormatException e) {
+                System.out.println("Wrong number formatting!");
+            }
 
 
         System.out.println("Sum: " + sum);
